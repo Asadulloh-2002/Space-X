@@ -1,0 +1,42 @@
+.footer {
+    padding-bottom: 13rem;
+    @include container(1271px);
+    margin-top: 120rem;
+    text-align: center;
+    img {
+        width: 138px;
+        height: 17px;
+        object-fit: contain;
+        margin-bottom: 4.4rem;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    &__item {
+        margin-bottom: 2.8rem;
+    }
+    &__item:not(:last-child) {
+        margin-right: 2rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $white-color;
+        @include footer-style;
+    }
+    &__text {
+        @include footer-style;
+        color: $gray-color;
+        margin-bottom: 3rem;
+    }
+    &__btn {
+        padding: 2rem 8.6rem 1.9rem 8.7rem;
+        background-color: $site-bgc;
+        color: $white-color;
+        border: 2px solid $white-color;
+        border-radius: 6px;
+        @include footer-style;
+    }
+}

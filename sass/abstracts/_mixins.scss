@@ -1,0 +1,38 @@
+@mixin container($max-width) {
+    width: 100%;
+    max-width: $max-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@mixin about-title($fz) {
+    font-weight: 400;
+    font-size: $fz;
+    line-height: 1.8;
+}
+@mixin footer-style {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.17;
+}
+
+
+@mixin responsive($breakpoints) {
+    @if($breakpoints == m-phone) {
+        @media only screen and (max-width: 400px) { @content }
+    };
+    @if($breakpoints == phone) {
+        @media only screen and (max-width: 590px) { @content }
+    };
+    @if($breakpoints == tables) {
+        @media only screen and (max-width: 768px) { @content }
+    };
+    @if($breakpoints == big-tables) {
+        @media only screen and (max-width: 992px) { @content }
+    };
+    @if($breakpoints == desktop) {
+        @media only screen and (max-width: 1200px) { @content }
+    }
+}

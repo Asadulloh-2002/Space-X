@@ -1,0 +1,75 @@
+.info {
+    margin-bottom: 18rem;
+    height: 100%;
+    @include container(1271px);
+    margin-bottom: 18.9rem;
+    background-image: url(../images/png/raketa.png);
+    background-repeat: no-repeat;
+    background-size: 644px 1718px;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include responsive(big-tables) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.501), rgba(0, 0, 0, 0.501)), url(../images/png/raketa.png);
+    }
+    @include responsive(phone) {
+        background-image: none;
+    }
+    &__falcon {
+        width: 100%;
+        max-width: 503px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        margin-bottom: 21.8rem;
+    }
+}
+.falcon__list {
+    list-style: none;
+    
+}
+.falcon__title {
+    width: 100%;
+    max-width: 177px;
+    position: absolute;
+    top: -9rem;
+    left: 0;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    @include responsive(big-tables) {
+        text-shadow: 0 0 1.5rem $white-color;
+    }
+    @include responsive(phone) {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+    }
+    transition: transform .5s ease;
+        &:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+            color: blue;
+        }
+}
+.falcon__item {
+    @include about-title(1.8rem);
+    font-weight: 400;
+    @include responsive(big-tables) {
+        text-shadow: 0 0 1.5rem $white-color;
+    }
+    @include responsive(phone) {
+        font-size: 1.5rem;
+    }
+    transition: transform .5s ease;
+        &:hover {
+            transform: scale(1.1);
+            color: yellow;
+        }
+    span {
+        color: $text-color;
+    }
+}

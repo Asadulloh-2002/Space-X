@@ -1,0 +1,39 @@
+.frame {
+    &__title {
+        width: 100%;
+        max-width: 174px;
+        font-size: 2.4rem;
+        line-height: 1.4;
+        margin-bottom: 4.5rem;
+        @include responsive(big-tables) {
+            text-shadow: 0 0 1.5rem $white-color;
+        }
+        @include responsive(phone) {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        transition: transform .5s ease;
+        &:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+            color: blue;
+        }
+    }
+    &__text {
+        width: 100%;
+        max-width: 490px;
+        @include about-title(1.6rem);
+        @include responsive(big-tables) {
+            text-shadow: 0 0 1.5rem $white-color;
+        }
+        @include responsive(phone) {
+            text-align: center;
+        }
+        transition: transform 1s ease;
+        &:hover {
+            transform: scale(1.1);
+            color: rgba(255, 255, 0, 0.577);
+        }
+    }
+}
