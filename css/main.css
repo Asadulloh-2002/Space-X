@@ -176,7 +176,7 @@ video {
 }
 .info__title:hover {
   top: 1.6rem;
-  transform: scale(1.25);
+  transform: scale(1.15);
   color: #010001;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: blue;
