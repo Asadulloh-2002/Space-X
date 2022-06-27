@@ -67,6 +67,13 @@ body {
 .site-header__link {
   display: flex;
 }
+@media only screen and (max-width: 590px) {
+  .site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .site-header img {
   width: 138px;
   height: 17px;
@@ -81,8 +88,7 @@ body {
 }
 @media only screen and (max-width: 590px) {
   .sitenav__list {
-    flex-direction: column;
-    align-items: center;
+    display: none;
   }
 }
 

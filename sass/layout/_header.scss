@@ -8,6 +8,11 @@
     &__link {
         display: flex;
     }
+    @include responsive(phone) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     img {
         width: 138px;
         height: 17px;
@@ -20,8 +25,7 @@
     align-items: center;
     list-style: none;
     @include responsive(phone) {
-        flex-direction: column;
-        align-items: center;
+        display: none;
     }
 }
 .sitenav__list:last-child {
