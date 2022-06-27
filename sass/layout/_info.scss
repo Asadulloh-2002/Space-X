@@ -1,4 +1,5 @@
 .info {
+    margin-bottom: 18.9rem;
     @include container(1271px);
     display: flex; 
     align-items: center;
@@ -79,6 +80,10 @@
             width: 100%;
             max-width: 500px;
             text-align: center;
+        }
+        transition: .5s ease;
+        &:hover {
+            color: blue;
         }
     }
     &__img {

@@ -1,0 +1,87 @@
+.footer {
+    padding-bottom: 13.1rem;
+    @include container(1271px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__link {
+        margin-bottom: 4.3rem;
+    }
+    &__img {
+        width: 138px;
+        height: 17px;
+        object-fit: contain;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.8rem;
+        list-style: none;
+        @include responsive(phone) {
+            flex-direction: column;
+        }
+    }
+    &__item:not(:last-child) {
+        margin-right: 2rem;
+        @include responsive(phone) {
+            margin-bottom: 2rem;
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+    &__item-link {
+        transition: .5s ease;
+        text-decoration: none;
+        @include footer-style;
+        color: $white-color;
+    }
+    &__item {
+        transition: .5s ease;
+    }
+    &__item:hover {
+        transform: scale(1.2);
+    }
+    &__item-link:hover {
+        color: blue;
+    }
+    &__text {
+        @include footer-style;
+        color: $gray-color;
+        margin-bottom: 3rem;
+    }
+    &__btn {
+        display: inline-block;
+        text-decoration: none;
+        color: $white-color;
+        padding: 3px;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+        span {
+            display: block;
+            background-color: $site-bgc;
+            padding: 2rem 8.6rem;
+            border-radius: 3px;
+            position: relative;
+            z-index: 2;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+            background-size: 50% 100%;
+            border-radius: inherit;
+            animation: animation .5s linear infinite;
+        }
+    }
+}
+
+@keyframes animation {
+    to {
+        transform: translateX(-50%);
+    }
+}
