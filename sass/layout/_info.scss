@@ -1,3 +1,90 @@
 .info {
-    display: none;
+    @include container(1271px);
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    @include responsive(big-tables) {
+        flex-direction: column;
+    }
+    &__title {
+        width: 100%;
+        max-width: 177px;
+        font-size: 2.4rem;
+        line-height: 1.4;
+        margin-bottom: 4.5rem;
+        transition: 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            top: 1.6rem;
+            transform: scale(1.25);
+            color: $site-bgc;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: blue;
+        }
+        @include responsive(phone) {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+    }
+    &__list-wrapper {
+        width: 100%;
+        max-width: 503px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 21rem;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        @include responsive(phone) {
+            font-size: 1.5rem;
+            border-bottom: 1px solid $white-color;
+            border-left: 1px solid $white-color;
+            border-right: 1px solid $white-color;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        @include about-title(1.8rem);
+        span {
+            color: $text-color;
+            transition: .5s ease;
+            &:hover {
+                color: $gray-color;
+            }
+        }
+        transition: .5s ease;
+        &:hover {
+            color: blue;
+            transform: scale(1.2);
+        }
+    }
+    &__item:not(:last-child) {
+        @include responsive(phone) {
+            margin-bottom: 2rem;
+        }
+    }
+    &__list:last-child {
+        @include responsive(phone) {
+            padding-top: 5.5rem;
+        }
+    }
+    &__text {
+        width: 100%;
+        max-width: 490px;
+        @include about-title(1.6rem);
+        @include responsive(phone) {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+    }
+    &__img {
+        object-fit: contain;
+        @include responsive(big-tables) {
+            display: none;
+        }
+    }
 }
