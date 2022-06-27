@@ -312,6 +312,11 @@ body {
   margin-top: 120rem;
   text-align: center;
 }
+@media only screen and (max-width: 992px) {
+  .footer {
+    margin-top: -rem;
+  }
+}
 .footer img {
   width: 138px;
   height: 17px;

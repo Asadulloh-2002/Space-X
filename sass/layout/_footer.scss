@@ -1,4 +1,7 @@
 .footer {
+    @include responsive (big-tables) {
+        margin-top: ;
+    }
     padding-bottom: 13rem;
     @include container(1271px);
     margin-top: 120rem;
